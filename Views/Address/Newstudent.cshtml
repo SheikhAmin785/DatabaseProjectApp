@@ -1,0 +1,42 @@
+﻿@model DatabaseProjectApp.Models.StudentModel;
+@{
+    ViewBag.Title = "Newstudent";
+}
+
+<h2>New student</h2>
+@using (Html.BeginForm(FormMethod.Post)) 
+{
+  <table>
+      <tr>
+          <td>@Html.LabelFor(c => c.Name)</td>
+          <td>@Html.TextBoxFor(c => c.Name)</td>
+      </tr>
+      <tr>
+          <td>@Html.LabelFor(c => c.RegNo)</td>
+          <td>@Html.TextBoxFor(c => c.RegNo)</td>
+      </tr>
+      <tr>
+          <td>@Html.LabelFor(c => c.Email)</td>
+          <td>@Html.TextBoxFor(c => c.Email)</td>
+      </tr>
+      <tr>
+          <td>@Html.LabelFor(c => c.Address)</td>
+          <td>@Html.TextBoxFor(c => c.Address)</td>
+
+      </tr>
+      <tr>
+          <td>@Html.LabelFor(c => c.Department)</td>
+          <td>@Html.DropDownListfor(c => c.Department,new SelectList(ViewBag.Department),"---select---",new
+         {@class = "from control})</td>
+
+      </tr>
+      <tr>
+          <td></td>
+          <td><input type="submit" value="save" /></td>
+      </tr>
+
+  </table>
+
+}
+            
+

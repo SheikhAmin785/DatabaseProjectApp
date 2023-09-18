@@ -1,0 +1,22 @@
+﻿@model List<DatabaseProjectApp.Models.StudentModel>
+
+@{
+    ViewBag.Title = "GetAll";
+    List<StudentModel> GetStudentModel =(List<StudentModel>) ViewBag.StudentModel;
+}
+
+<h2>GetAll</h2>
+<table class="table table-bordered">
+@foreach(var item in model)
+            {
+    <tr>
+        <td>@item.Name</td>
+        <td>@item.RegNo</td>
+        <td>@item.Email</td>
+        <td>@item.Address</td>
+        <td>@item.Department</td>
+    </tr>
+            }
+
+</table>
+
